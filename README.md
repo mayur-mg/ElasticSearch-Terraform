@@ -3,7 +3,9 @@ This Repository contains Terraform code to install elasticsearch
 
 This assignment consists of 3 file - 
 main.tf - Contain the main set of configuration of the ElasticSearch
+
 variables.tf - Contain the variable definitions
+
 output.tf - extracting the value of an output variable from the state file.
 
 
