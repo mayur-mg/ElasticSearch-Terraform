@@ -30,9 +30,18 @@ Answer - I choose Terraform because it is an configuration orchestration tool th
 Answer - SG are allowed for https protocal only, node to node encryption is enabled, Using Service-Linked Roles for Amazon ES so secure communication can happen.
 
 3. How would you monitor this instance? What metrics would you monitor?
+Answer - To view these metrics, use the Cluster health and Instance health tabs in the Amazon Elasticsearch Service console.Monitoring of the instances can be done by c;loudwatch also.
+ Additional metrics which can be monitored is WarmCPUUtilization, IndexingLatency, IndexingRate, Read and WriteLatency etc.
+ 
 4. Could you extend your solution to launch a secure cluster of ElasticSearch nodes? What
 would need to change to support this use case?
+Answer - Yes Elasticsearch Nodes cluster can be more secured by using Encryption at Rest which can not be enabled in t2.small instance, roles can be tighten, HTTPs basic authentication for Elasticsearch and Kibana, Authentication for Kibana using Cognito, Master node can be enabled.
+
 5. Could you extend your solution to replace a running ElasticSearch instance with little or no
 downtime? How?
+Answer - Scaling Amazon Elasticsearch Service domain by adding or modifying instances, and storage volumes is an online operation that does not require any downtime.
+
 6. Was it a priority to make your code well structured, extensible, and reusable?
-7. What sacrifices did you make due to time?
+Answer - Yes, making it reusable and extensible helps to use it anywhere with any infrastructure.
+
+
